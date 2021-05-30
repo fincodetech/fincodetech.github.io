@@ -1,0 +1,125 @@
+
+<!-- saved from url=(0012)about:srcdoc -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>window.onmessage = function(event) {event.source.postMessage({iframeId: event.data, scrollHeight: document.body.getBoundingClientRect().height || document.body.scrollHeight}, event.origin);};</script></head><body style="margin: 0">
+
+<style>
+
+#mainCaptcha{
+position: relative;
+left : 60px;
+top: 5px;
+
+}
+
+#refresh{
+position:relative;
+left:200px;
+width:100px;
+height:30px;
+bottom:10px;
+background-image: url(rpt.jpg);
+}
+
+h1 {text-align: center;}
+td textarea {
+    width: 200%;
+    height: 100%
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+
+
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+/* Set a style for all buttons */
+button {
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.9;
+  align: center;
+ 
+}
+
+input[type=captcha] {
+  background: #f1f1f1;
+  color: red;
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+
+</style>
+<script>
+function CaptchaCode() {
+  var Numb1, Numb2, Numb3, Numb4, Code;    
+  Numb1 = (Math.ceil(Math.random() * 10)-1).toString();
+  Numb2 = (Math.ceil(Math.random() * 10)-1).toString();
+  Numb3 = (Math.ceil(Math.random() * 10)-1).toString();
+  Numb4 = (Math.ceil(Math.random() * 10)-1).toString();
+ 
+  code = Numb1 + Numb2 + Numb3 + Numb4;
+  document.getElementById("mainCaptcha").innerHTML = code
+  document.getElementById("mainCaptcha").value = code
+}
+
+</script>
+
+
+<form action="https://nidhi.fincodetech.in/book-free-demo" style="border:1px solid #ccc">
+  <div class="container">
+    <h1 style="color:dodgerblue">REQUEST A FREE DEMO</h1>
+    <p>To get started straight away,simply fill in your contact information below and one of our team will be in touch with you shortly.</p>
+    <hr>
+<table width="100%">
+    <tbody><tr>
+    <td><input type="text" placeholder="Name" name="name" required=""></td>
+    <td><input type="text" placeholder="Email" name="email" required=""></td>
+    </tr>
+    <tr>
+    <td><input type="text" placeholder="Mobile" name="mobile" required=""></td>
+    <td><input type="text" placeholder="City" name="city" required=""></td>
+</tr>
+    <tr colspan="2">
+    <td><input type="text" placeholder="Nidhi Software" name="nidhi_software" disabled=""></td>
+</tr>
+    <tr>
+    <td><input type="text" placeholder="Enter Secutrity Code" name="psw" required=""></td>
+    <td><h2 type="text" id="mainCaptcha"></h2>
+    <p><input class="capt" type="button" value="Refresh" id="refresh" onclick="CaptchaCode();"></p>
+    </td></tr>
+    <tr>
+    <td><textarea rows="6" placeholder="Message"></textarea></td>
+    </tr>
+  </tbody></table>
+  <button style="margin-left: 40%" type="submit">Send Message</button>
+
+
+
+
+</div></form></body></html>
